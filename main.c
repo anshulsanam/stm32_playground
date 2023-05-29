@@ -6,9 +6,9 @@ int main(void) {
     gpio_set_mode(GPIOE, 9, GPIO_MODE_OUTPUT);
     for (;;) {
         gpio_write(GPIOE, 9, LOW);
-        spin(999999);
+        spin(1000000);
         gpio_write(GPIOE, 9, HIGH);
-        spin(999999);
+        spin(1000000);
     }
     return 0; 
 }
