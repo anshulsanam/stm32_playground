@@ -6,14 +6,10 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 
+#include "systick.h"
 #include "stm32f3xx.h"
 
-#define FREQ 16000000  // CPU frequency, 16 Mhz
-#define BIT(x) (1UL << (x))
-#define PIN(bank, num) ((((bank) - 'A') << 8) | (num))
-#define PINNO(pin) (pin & 255)
-#define PINBANK(pin) (pin >> 8)
-
+#define MCU_FREQ 72000000  // CPU frequency, 72 Mhz
 
 // Enum values are per datasheet: 0, 1, 2, 3
 enum { GPIO_MODE_INPUT, GPIO_MODE_OUTPUT, GPIO_MODE_AF, GPIO_MODE_ANALOG };
